@@ -2,21 +2,45 @@ public class Vehicle {
     private int doors;
     private int wheels;
     private String color;
+
     protected String name;
 
-    //public String describe() {
+//     constructor
+    public Vehicle(int d, int w, String c, String n){
+        this.doors = d;
+        this.wheels = w;
+        this.color = c;
+        this.name = n;
+    }
+
+//      empty constructor
+    public Vehicle(){
+        System.out.println("\nEmpty vehicle constructor called..");
+    }
+
+//    public String describe() {
+//         String description = "\nThe vehicle has "
+//                        + doors
+//                        + " doors, "
+//                        + wheels
+//                        + " wheels,"
+//                        + " and it's color is "
+//                        + color
+//                        + ".";
+//     return description;
+
     public String toString() {
-        // String description = "\nThe ve.."
         return "\nThe vehicle has "
                 + doors
                 + " doors, "
                 + wheels
-                + " wheels,"
-                + " and it's color is "
+                + " wheels, it's "
                 + color
+                + " colored and it's name is "
+                + name
                 + ".";
-        // return description;
     }
+
     public int getDoors() {
         return doors;
     }
@@ -28,8 +52,7 @@ public class Vehicle {
     public int getWheels() {
         return wheels;
     }
-    // private method cant access from the sub-classes
-    //private void setWheels(int wheels) {
+
     public void setWheels(int wheels) {
         this.wheels = wheels;
     }
@@ -41,4 +64,5 @@ public class Vehicle {
     public void setColor(String color) {
         this.color = color;
     }
+
 }
